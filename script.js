@@ -8,11 +8,11 @@ let userIsBlocked = false;
 let goToPage = "";
 
 if (userName != "" && userAge >= 18 && !userIsBlocked) {
+  userIsLoggedIn = true;
   if (userIsAdmin) {
     goToPage = "/admin";
   } else {
     goToPage = "/home";
-    userIsLoggedIn = true;
   }
 } else {
   console.log("feil");
