@@ -12,6 +12,7 @@ if (userName != "" && userAge >= 18 && !userIsBlocked) {
     goToPage = "/admin";
   } else {
     goToPage = "/home";
+    userIsLoggedIn = true;
   }
 } else {
   console.log("feil");
