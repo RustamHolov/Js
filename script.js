@@ -7,7 +7,11 @@ let userIsBlocked = false;
 
 let goToPage = "";
 
-if (userName != "" && userAge >= 18 && !userIsBlocked) {
+const nameExist =
+  (typeof userName === "string" || userName instanceof String) &&
+  userName.length > 0;
+
+if (nameExist && userAge >= 18 && !userIsBlocked) {
   userIsLoggedIn = true;
   if (userIsAdmin) {
     goToPage = "/admin";
